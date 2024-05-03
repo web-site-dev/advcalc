@@ -61,9 +61,41 @@ p {
 .social-icon:last-child {
     margin-right: 0;
 }
-.name{
-  margin-left: 300px;
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h2, h3 {
+        font-size: 18px; /* Smaller font size for smaller screens */
+    }
+
+    .button {
+        padding: 8px 16px; /* Smaller buttons on smaller screens */
+    }
+
+    .social-icon {
+        font-size: 20px; /* Smaller icons */
+    }
+
+    .name {
+        margin-left: 0; /* Adjust margin for smaller screens */
+        text-align: center; /* Center align name */
+    }
 }
+
+@media (max-width: 480px) {
+    .section {
+        margin-bottom: 20px; /* Less spacing between sections */
+    }
+
+    p {
+        font-size: 14px; /* Smaller text */
+    }
+}
+
 
     </style>
     </head>
@@ -99,8 +131,8 @@ p {
     </nav>
     <div class="container">
         <div class="content">
-          <h2>Welcome to ADVCALC,</h2>
-          <p>Welcome to CalculatorHub, your go-to destination for math, conversion, and health calculations. From solving equations to converting units and tracking health metrics like BMI and BMR, our user-friendly calculators provide accurate results in seconds. Whether you're a student, professional, or health enthusiast, CalculatorHub simplifies complex calculations to help you make informed decisions and reach your goals efficiently. Explore our diverse range of tools and experience the convenience of CalculatorHub today!
+          <h2>About us</h2>
+          <p>Welcome to ADVCALC, your go-to destination for math, conversion, and health calculations. From solving equations to converting units and tracking health metrics like BMI and BMR, our user-friendly calculators provide accurate results in seconds. Whether you're a student, professional, or health enthusiast, ADVCALC simplifies complex calculations to help you make informed decisions and reach your goals efficiently. Explore our diverse range of tools and experience the convenience of ADVCALC today!
               .</p>
           <h3>Our Offerings</h3>
           <p>From our versatile scientific calculator capable of handling advanced mathematical functions to our conversion calculator for effortlessly converting between units, and our health calculators such as BMI, BMR, and pace calculators, we offer a diverse range of tools to meet your needs.</p>
