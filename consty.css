@@ -55,7 +55,7 @@ select, input, button {
 
 select, input {
     background: rgba(255, 255, 255, 0.25); /* More transparency for better background blending */
-    color: black;
+    color: white;
     cursor: pointer;
 }
 
