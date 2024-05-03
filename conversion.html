@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion Calculator</title>
+    <link rel="stylesheet" href="consty.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+          <i class='bx bx-menu'></i>
+          <div class="logo"><a href="#">AdvCalc</a></div>
+          <div class="nav-links">
+            <ul class="links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="face.html">MATHS</a></li>
+                <li><a href="conversion.html">CONVERSION</a></li>
+                <li>
+                  <a href="#">HEALTH</a>
+                  <i class='bx bxs-chevron-down js-arrow arrow'></i>
+                  <ul class="js-sub-menu sub-menu">
+                    <li><a href="bmi.html">BMI Calculator</a></li>
+                    <li><a href="bmr.html">BMR Calculator</a></li>
+                    <li><a href="calorie.html">Calorie Calculator</a></li>
+                    <li><a href="pace.html">Pace Calculator</a></li>
+                    <li><a href="bodyfat.html">Body Fat Calculator</a></li>
+                    <li><a href="idealweight.html">Ideal Weight Calculator</a></li>
+                    <li><a href="pregnancy.html">Pregnancy Date Calculator</a></li>
+                    <li><a href="conception.html">Conception Date Calculator</a></li>
+                  </ul>
+                </li>
+                <li><a href="about.html">ABOUT US</a></li>
+                
+              </ul>
+          </div>
+        </div>
+    </nav>
+    <h1>Conversion Calculator</h1>
+    <div class="calculator">
+        <div class="field">
+            <label for="category">Unit of Measurement:</label>
+            <select id="category" onchange="updateUnits()">
+                <option value="" disabled selected>Unit</option>
+                <option value="length">Length</option>
+                <option value="mass">Mass</option>
+                <option value="angle">Angle</option>
+                <option value="volume">Volume</option>
+                <option value="area">Area</option>
+                <option value="time">Time</option>
+                <!-- Add other categories if needed -->
+            </select>
+        </div>
+        <div class="field">
+            <label for="unitTo">Convert from:</label>
+            <select id="unitTo">
+                <option value="" disabled selected>Convert from</option>
+            </select>
+        </div>
+        <div class="field">
+            <label for="unitFrom">Convert to:</label>
+            <select id="unitFrom">
+                <option value="" disabled selected>Convert to</option>
+            </select>
+        </div>
+        
+        <div class="field">
+            <label for="inputValue">Enter Value:</label>
+            <input type="number" id="inputValue" placeholder="Enter value to convert.">
+        </div>
+        <div class="field">
+            <label for="outputValue">Result:</label>
+            <input type="number" id="outputValue" placeholder="Result" readonly>
+        </div>
+        <button onclick="convert()">Convert</button>
+    </div>
+    <section class="description">
+        <h2>Understanding Conversion Calculators</h2>
+<p>A conversion calculator is a versatile tool used to convert measurements from one unit to another across various categories, including length, mass, angle, volume, time, and area. It simplifies the process of converting between different units of measurement, facilitating tasks in science, engineering, cooking, construction, and everyday life.</p>
+<h3>How Do Conversion Calculators Work?</h3>
+<p>Conversion calculators operate by allowing users to input a value in one unit of measurement and select the desired unit to convert to. The calculator then performs the necessary mathematical calculations to provide the converted value.</p>
+<h3>Types of Conversion Calculators:</h3>
+<p>Conversion calculators cater to a wide range of measurement types:</p>
+<ul>
+    <li><strong>Length Conversion:</strong> Converts measurements between units such as inches, feet, meters, and miles.</li>
+    <li><strong>Mass Conversion:</strong> Converts measurements between units such as pounds, kilograms, ounces, and grams.</li>
+    <li><strong>Angle Conversion:</strong> Converts angular measurements between units such as degrees, radians, and gradians.</li>
+    <li><strong>Volume Conversion:</strong> Converts measurements between units such as liters, gallons, milliliters, and cubic meters.</li>
+    <li><strong>Time Conversion:</strong> Converts measurements between units such as seconds, minutes, hours, days, and years.</li>
+    <li><strong>Area Conversion:</strong> Converts measurements between units such as square meters, square feet, hectares, and acres.</li>
+</ul>
+<h3>Importance of Conversion Calculators:</h3>
+<p>Conversion calculators play a crucial role in ensuring accuracy and efficiency across various fields. They streamline calculations, facilitate communication, and simplify complex tasks by enabling individuals to work seamlessly with different units of measurement.</p>
+<h3>Using Conversion Calculators:</h3>
+<p>To utilize a conversion calculator, input the value you wish to convert and select the appropriate units for conversion. The calculator will then promptly display the converted value, making it convenient to convert measurements across different units.</p>
+
+    </section>
+    <footer>
+        <p>Copyright &copy; adv_calc</p>
+    </footer>
+    <script src="javacon.js"></script>
+</body>
+</html>

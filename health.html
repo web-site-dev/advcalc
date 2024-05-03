@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Calculator</title>
+    <link rel="stylesheet" href="helstyle.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Health Calculator</h1>
+        <select id="calcType" onchange="updateCalculator()">
+            <option value="bmi">BMI Calculator</option>
+            <option value="calorie">Calorie Calculator</option>
+            <option value="bodyFat">Body Fat Calculator</option>
+            <option value="bmr">BMR Calculator</option>
+            <option value="idealWeight">Ideal Weight Calculator</option>
+            <option value="pace">Pace Calculator</option>
+            <option value="pregnancy">Pregnancy Calculator</option>
+            <option value="conception">Pregnancy Conception Calculator</option>
+        </select>
+
+        <div id="calculatorForm">
+            <!-- Forms will be dynamically inserted here -->
+        </div>
+
+            </div>
+    <script src="helscript.js"></script>
+</body>
+</html>

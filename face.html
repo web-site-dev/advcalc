@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Scientific Calculator</title>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+          <i class='bx bx-menu'></i>
+          <div class="logo"><a href="#">AdvCalc</a></div>
+          <div class="nav-links">
+            <ul class="links">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="face.html">MATHS</a></li>
+              <li><a href="conversion.html">CONVERSION</a></li>
+              <li>
+                <a href="#">HEALTH</a>
+                <i class='bx bxs-chevron-down js-arrow arrow'></i>
+                <ul class="js-sub-menu sub-menu">
+                  <li><a href="bmi.html">BMI Calculator</a></li>
+                  <li><a href="bmr.html">BMR Calculator</a></li>
+                  <li><a href="calorie.html">Calorie Calculator</a></li>
+                  <li><a href="pace.html">Pace Calculator</a></li>
+                  <li><a href="bodyfat.html">Body Fat Calculator</a></li>
+                  <li><a href="idealweight.html">Ideal Weight Calculator</a></li>
+                  <li><a href="pregnancy.html">Pregnancy Date Calculator</a></li>
+                  <li><a href="conception.html">Conception Date Calculator</a></li>
+                </ul>
+              </li>
+              <li><a href="about.html">ABOUT US</a></li>
+              
+            </ul>
+          </div>
+        </div>
+    </nav>
+    
+        <div class="main-container">
+        <h1 class="title">Scientific Calculator</h1>
+        <div class="container">
+            <div class="user-manual">
+                <h3>Quick Guide</h3>
+                <ul>
+                    <li><b>AC:</b> Clear display</li>
+                    <li><b>DEL:</b> Delete last</li>
+                    <li><b>+/-:</b> Toggle sign</li>
+                    <li><b>( ):</b> Open/close parentheses</li>
+                    <li><b>+</b>, <b>-</b>, <b>*</b>, <b>/</b>: Basic operations</li>
+                    <li><b>sin(), cos(), tan():</b> Enter angle in degrees, close parentheses</li>
+                    <li><b>sin⁻¹(), cos⁻¹():</b> Input [-1,1], close parentheses, in degrees</li>
+                    <li><b>tan⁻¹():</b> close parentheses, in degrees</li>
+                    <li><b>log(), ln():</b> Enter number, close parentheses</li>
+                </ul>
+            </div>
+            <div class="calculator">
+                <input type="text" id="inputBox" placeholder="0" readonly>
+                <div class="button-row">
+                    <button class="button operator">AC</button>
+                    <button class="button operator">DEL</button>
+                    <button class="button operator">(</button>
+                    <button class="button operator">)</button>
+                </div>
+                <div class="button-row">
+                    <button class="button">7</button>
+                    <button class="button">8</button>
+                    <button class="button">9</button>
+                    <button class="button operator">/</button>
+                </div>
+                <div class="button-row">
+                    <button class="button">4</button>
+                    <button class="button">5</button>
+                    <button class="button">6</button>
+                    <button class="button operator">*</button>
+                </div>
+                <div class="button-row">
+                    <button class="button">1</button>
+                    <button class="button">2</button>
+                    <button class="button">3</button>
+                    <button class="button operator">-</button>
+                </div>
+                <div class="button-row">
+                    <button class="button">0</button>
+                    <button class="button">00</button>
+                    <button class="button">.</button>
+                    <button class="button operator">+</button>
+                </div>
+                <div class="button-row">
+                    <button class="button operator">sin</button>
+                    <button class="button operator">cos</button>
+                    <button class="button operator">tan</button>
+                    <button class="button operator">ln</button>
+                </div>
+                <div class="button-row">
+                    <button class="button">Ans</button>
+                    <button class="button operator">sin⁻¹</button>
+                    <button class="button operator">cos⁻¹</button>
+                    <button class="button operator">tan⁻¹</button>
+                    <button class="button operator equalBtn">=</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <section class="description">
+        <h2>Understanding Scientific Calculators</h2>
+<p>A scientific calculator is a specialized calculator designed to perform a wide range of mathematical calculations, including basic arithmetic operations as well as more advanced functions commonly used in science, engineering, and mathematics.</p>
+<h3>Key Functions of a Scientific Calculator:</h3>
+<p>A typical scientific calculator includes the following functions:</p>
+<ul>
+    <li><strong>Addition (+):</strong> Adds two or more numbers together.</li>
+    <li><strong>Subtraction (-):</strong> Subtracts one number from another.</li>
+    <li><strong>Multiplication (×):</strong> Multiplies two or more numbers together.</li>
+    <li><strong>Division (÷):</strong> Divides one number by another.</li>
+    <li><strong>Trigonometric Functions:</strong> Includes sine, cosine, tangent, secant, cosecant, and cotangent functions, allowing users to calculate trigonometric ratios.</li>
+    <li><strong>Inverse Trigonometric Functions:</strong> Provides inverse trigonometric functions such as arcsine, arccosine, and arctangent, allowing users to find angles given trigonometric ratios.</li>
+    <li><strong>Logarithmic Functions:</strong> Includes logarithm (log) and natural logarithm (ln) functions, allowing users to calculate logarithmic values.</li>
+</ul>
+
+<h3>Usage of Scientific Calculators:</h3>
+<p>To use a scientific calculator, simply enter the numbers and operations you wish to perform using the keypad, and then press the corresponding function key. Most scientific calculators display both the input expression and the result on the screen for easy reference.</p>
+
+    </section>
+    <footer>
+        <p>Copyright &copy; adv_calc</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
