@@ -430,4 +430,7 @@ nav .navbar .links li a:hover {
         cursor: pointer;  /* Indicates it's clickable */
     }
 }
+::placeholder {
+  color: white;;
+}
 
