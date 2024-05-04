@@ -464,26 +464,3 @@ nav .navbar .links li a:hover {
     background-color: black;
 }
 
-@media (max-width:800px){
-    .navbar .nav-links {
-        position: fixed;
-        top: 70px; /* Adjust this if your nav height is different */
-        left: -100%; /* Start off-screen */
-        width: 100%; /* Full width */
-        background: rgba(255, 255, 255, 0.2);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        transition: left 0.3s ease; /* Smooth transition for the movement */
-        z-index: 1000;
-    }
-    .navbar .bx-menu {
-        display: block;  /* Ensure it's displayed */
-        position: relative;  /* Ensures it's part of the layout */
-        z-index: 1001;  /* Higher than the navbar */
-        cursor: pointer;  /* Indicates it's clickable */
-    }
-}
-.navbar .nav-links.active {
-  left: 0;
-  transition: left 0.3s ease;
-  background-color: black;
-}
