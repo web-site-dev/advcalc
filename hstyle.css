@@ -547,3 +547,8 @@ nav .navbar .links li a:hover {
         cursor: pointer;  /* Indicates it's clickable */
     }
 }
+.navbar .nav-links.active {
+  left: 0;
+  transition: left 0.3s ease;
+  background-color: black;
+}
