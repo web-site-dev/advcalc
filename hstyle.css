@@ -168,186 +168,121 @@ nav .navbar {
 }
 
 @media (max-width: 800px) {
-    nav .navbar {
-        padding: 0 15px;
-    }
+ nav {
+    position: fixed; /* Change position to fixed */
+    top: 0; /* Ensure it sticks to the top of the viewport */
 }
 
-/* Add more media queries as needed */
+.navbar .bx-menu {
+    display: block;
+}
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  body{
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh; /* Ensures that the body is at least the height of the viewport */
-    margin: 0;
-    background: linear-gradient(45deg, #0a0a0a, #3a4452);
-    color: #fff;
-    position: relative; /* Keeps footer at the bottom without using absolute positioning */
-    padding-bottom: 10px;
-   
-  }
-  nav{
+nav .navbar .nav-links {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100%;
+    display: block;
+    max-width: 270px;
     width: 100%;
-    height: 100%;
-    height: 70px;
-    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+    background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    z-index: 99;
-  }
-  nav .navbar{
-    height: 100%;
-    max-width: 1250px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    /* background: red; */
-    padding: 0 50px;
-  }
-  .navbar .logo a{
-    font-size: 30px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  nav .navbar .nav-links{
-    line-height: 70px;
-    height: 100%;
-  }
-  nav .navbar .links{
-    display: flex;
-  }
-  nav .navbar .links li{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
-    padding: 0 14px;
-  }
-  nav .navbar .links li a{
-    height: 100%;
-    text-decoration: none;
-    white-space: nowrap;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 500;
-  }
-  .links li:hover .htmlcss-arrow,
-  .links li:hover .js-arrow{
-    transform: rotate(180deg);
-    color: #0a0a0a;
-    }
-  nav .navbar .links li .arrow{
-     
-    height: 100%;
-    width: 22px;
-    line-height: 70px;
-    text-align: center;
-    display: inline-block;
-    color: #fff;
-    transition: all 0.3s ease;
-  }
-  nav .navbar .links li .sub-menu{
-    position: absolute;
-    top: 70px;
-    left: 0;
     line-height: 40px;
-    background: linear-gradient(45deg, #0a0a0a, #3a4452);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    border-radius: 0 0 4px 4px;
-    display: none;
-    z-index: 2;
-  }
-  nav .navbar .links li:hover .htmlCss-sub-menu,
-  nav .navbar .links li:hover .js-sub-menu{
+    padding: 20px;
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+.navbar .nav-links .sidebar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-logo .logo-name {
+    font-size: 25px;
+    color: #fff;
+}
+
+.sidebar-logo i,
+.navbar .bx-menu {
+    font-size: 25px;
+    color: #fff;
+}
+
+nav .navbar .links {
     display: block;
-    color: #0a0a0a;
-  }
-  .navbar .links li .sub-menu li{
-    padding: 0 22px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-  .navbar .links li .sub-menu a{
-    color: #fff;
-    font-size: 15px;
-    font-weight: 500;
-  }
-  .navbar .links li .sub-menu .more-arrow{
+    margin-top: 20px;
+}
+
+nav .navbar .links li {
+    display: block;
+}
+
+nav .navbar .links li .arrow {
     line-height: 40px;
-  }
-  .navbar .links li .htmlCss-more-sub-menu{
-     line-height: 40px; 
-  }
-  .navbar .links li .sub-menu .more-sub-menu{
-    position: absolute;
+}
+
+nav .navbar .links li .sub-menu {
+    position: relative;
     top: 0;
-    left: 100%;
-    border-radius: 0 4px 4px 4px;
-    z-index: 1;
+    box-shadow: none;
     display: none;
-  }
-  .links li .sub-menu .more:hover .more-sub-menu{
-    display: block;
-  }
-  .navbar .search-box{
+}
+
+nav .navbar .links li .sub-menu li {
+    border-bottom: none;
+}
+
+.navbar .links li .sub-menu .more-sub-menu {
+    display: none;
     position: relative;
-     height: 40px;
-    width: 40px;
-  }
-  .navbar .search-box i{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    line-height: 40px;
-    text-align: center;
-    font-size: 22px;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .navbar .search-box .input-box{
-    position: absolute;
-    right: calc(100% - 40px);
-    top: 80px;
-    height: 60px;
-    width: 300px;
-    background: rgba(255, 255, 255, 0.2);
-  
-    border-radius: 6px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.4s ease;
-  }
-  .navbar.showInput .search-box .input-box{
-    top: 65px;
-    opacity: 1;
-    pointer-events: auto;
-    background: rgba(255, 255, 255, 0.2);
-  
-  }
-  
-  
-  .navbar .nav-links .sidebar-logo{
+    left: 0;
+}
+
+.navbar .links li .sub-menu .more-sub-menu li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Show sub-menus when their parent link is hovered */
+.navbar .links li:hover .sub-menu {
+    display: block;
+}
+
+.links li:hover .htmlcss-arrow,
+.links li:hover .js-arrow {
+    transform: rotate(0deg);
+}
+
+.navbar .links li .sub-menu .more-sub-menu {
     display: none;
-  }
-  .navbar .bx-menu{
+}
+
+.navbar .links li .sub-menu .more span {
+    display: flex;
+    align-items: center;
+}
+
+.links li .sub-menu .more:hover .more-sub-menu {
     display: none;
-  }
+}
+
+.navbar .nav-links.show1 .links .htmlCss-sub-menu,
+.navbar .nav-links.show3 .links .js-sub-menu,
+.navbar .nav-links.show2 .links .more .more-sub-menu {
+    display: block;
+}
+
+.navbar .nav-links.show1 .links .htmlcss-arrow,
+.navbar .nav-links.show3 .links .js-arrow {
+    transform: rotate(180deg);
+}
+
+.navbar .nav-links.show2 .links .more-arrow {
+    transform: rotate(90deg);
+}
+
   @media (max-width:920px) {
     nav .navbar{
       max-width: 100%;
