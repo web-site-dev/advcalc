@@ -12,35 +12,53 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
         
         body {
-            background-color: #1a1a2e;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(45deg, #0a0a0a, #3a4452);
             color: #fff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            position: relative;
+            padding-bottom: 10px;
         }
         
         /* Navigation styles */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: linear-gradient(45deg, #0a0a0a, #3a4452);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            z-index: 99;
+        }
+        
         .navbar {
-            background-color: #16213e;
-            padding: 15px 20px;
+            height: 100%;
+            max-width: 1250px;
+            width: 100%;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            justify-content: space-between;
+            margin: auto;
+            padding: 0 50px;
         }
         
         .logo a {
+            font-size: 30px;
             color: #fff;
-            font-size: 1.5rem;
-            font-weight: bold;
             text-decoration: none;
+            font-weight: 600;
         }
         
         .nav-links {
-            display: flex;
-            align-items: center;
+            line-height: 70px;
+            height: 100%;
         }
         
         .links {
@@ -50,30 +68,47 @@
         
         .links li {
             position: relative;
-            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0 14px;
         }
         
         .links li a {
-            color: #fff;
+            height: 100%;
             text-decoration: none;
-            padding: 8px 12px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
+            white-space: nowrap;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
         }
         
-        .links li a:hover {
-            background-color: #0f3460;
+        .links li:hover .htmlcss-arrow,
+        .links li:hover .js-arrow {
+            transform: rotate(180deg);
         }
         
-        .sub-menu {
-            display: none;
+        .links li .arrow {
+            height: 100%;
+            width: 22px;
+            line-height: 70px;
+            text-align: center;
+            display: inline-block;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        
+        .links li .sub-menu {
             position: absolute;
-            background-color: #16213e;
-            width: 200px;
-            list-style: none;
-            border-radius: 4px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            z-index: 100;
+            top: 70px;
+            left: 0;
+            line-height: 40px;
+            background: linear-gradient(45deg, #0a0a0a, #3a4452);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            border-radius: 0 0 4px 4px;
+            display: none;
+            z-index: 2;
         }
         
         .links li:hover .sub-menu {
@@ -81,147 +116,150 @@
         }
         
         .sub-menu li {
-            width: 100%;
+            padding: 0 22px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
         
-        .sub-menu li a {
-            display: block;
-            padding: 10px 15px;
+        .sub-menu a {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
         }
         
-        .bx-menu, .js-arrow {
+        .bx-menu {
             display: none;
+            font-size: 25px;
+            color: #fff;
             cursor: pointer;
-            font-size: 1.5rem;
         }
         
         /* Container and content styles */
         .container {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: #16213e;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 1200px;
+            width: 90%;
+            margin: 100px auto 50px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        .section {
-            margin-bottom: 30px;
+        h1 {
+            color: #fff;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
         }
         
         h2 {
             color: #e94560;
-            margin-bottom: 20px;
             font-size: 2rem;
-        }
-        
-        h3 {
-            color: #e94560;
-            margin: 20px 0 15px;
-            font-size: 1.5rem;
+            margin: 30px 0 15px;
         }
         
         p {
-            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
         }
         
         .name {
             font-weight: bold;
             color: #e94560;
-            margin-top: 20px;
-        }
-        
-        /* Button styles */
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #e94560;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-right: 10px;
-            margin-top: 10px;
-            transition: background-color 0.3s;
-        }
-        
-        .button:hover {
-            background-color: #c2334d;
-        }
-        
-        /* Social media icons */
-        .social-icons {
-            margin: 20px 0;
-        }
-        
-        .social-icon {
-            display: inline-block;
-            margin-right: 15px;
-            font-size: 24px;
-            color: #fff;
-            transition: color 0.3s;
-        }
-        
-        .social-icon:hover {
-            color: #e94560;
+            margin-top: 30px;
+            text-align: right;
+            font-size: 1.2rem;
         }
         
         /* Responsive adjustments */
-        @media (max-width: 768px) {
+        @media (max-width: 920px) {
             .navbar {
-                flex-direction: column;
-                align-items: flex-start;
+                padding: 0 25px;
             }
             
-            .bx-menu, .js-arrow {
+            .logo a {
+                font-size: 27px;
+            }
+            
+            .links li {
+                padding: 0 10px;
+            }
+            
+            .links li a {
+                font-size: 15px;
+            }
+        }
+        
+        @media (max-width: 800px) {
+            .bx-menu {
                 display: block;
             }
             
             .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
                 width: 100%;
-                display: none;
-                margin-top: 15px;
+                background: rgba(0, 0, 0, 0.9);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+                line-height: 40px;
+                padding: 20px;
+                transition: all 0.5s ease;
+                z-index: 1000;
             }
             
             .links {
-                flex-direction: column;
-                width: 100%;
+                display: block;
+                margin-top: 20px;
             }
             
             .links li {
-                margin: 5px 0;
+                display: block;
+                padding: 10px 0;
             }
             
-            .sub-menu {
-                position: static;
-                width: 100%;
+            .links li .sub-menu {
+                position: relative;
+                top: 0;
                 box-shadow: none;
+                display: none;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.7);
             }
             
             .container {
-                margin: 15px;
+                margin: 90px 15px 30px;
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
                 padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
             }
             
             h2 {
                 font-size: 1.5rem;
             }
             
-            h3 {
-                font-size: 1.2rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .button {
-                display: block;
-                width: 100%;
-                margin-bottom: 10px;
-                text-align: center;
-            }
-            
-            .social-icon {
-                font-size: 20px;
-                margin-right: 10px;
+            p {
+                font-size: 1rem;
             }
         }
     </style>
@@ -239,7 +277,7 @@
                 <li>
                   <a href="#">HEALTH</a>
                   <i class='bx bxs-chevron-down js-arrow arrow'></i>
-                  <ul class="js-sub-menu sub-menu">
+                  <ul class="sub-menu">
                     <li><a href="bmi.html">BMI Calculator</a></li>
                     <li><a href="bmr.html">BMR Calculator</a></li>
                     <li><a href="calorie.html">Calorie Calculator</a></li>
@@ -257,20 +295,29 @@
     </nav>
     
     <div class="container">
-        <div class="content">
-          <h2>About us</h2>
-          <p>Welcome to ADVCALC, your go-to destination for math, conversion, and health calculations. From solving equations to converting units and tracking health metrics like BMI and BMR, our user-friendly calculators provide accurate results in seconds. Whether you're a student, professional, or health enthusiast, ADVCALC simplifies complex calculations to help you make informed decisions and reach your goals efficiently. Explore our diverse range of tools and experience the convenience of ADVCALC today!</p>
-          
-          <h3>Our Offerings</h3>
-          <p>From our versatile scientific calculator capable of handling advanced mathematical functions to our conversion calculator for effortlessly converting between units, and our health calculators such as BMI, BMR, and pace calculators, we offer a diverse range of tools to meet your needs.</p>
-          
-          <h3>Why Choose Us?</h3>
-          <p>With a commitment to excellence in design and functionality, we ensure that our calculators are easy to use and navigate, whether you're a student studying for an exam or a professional solving complex equations or an individual seeking health calulations.</p>
-          
-          
-          
-          <p class="name">Prabigya Acharya</p>
-                    
+        <h1>AdvCalc</h1>
+        
+        <h2>About Us</h2>
+        <p>Welcome to ADVCALC, your go-to destination for math, conversion, and health calculations. From solving equations to converting units and tracking health metrics like BMI and BMR, our user-friendly calculators provide accurate results in seconds. Whether you're a student, professional, or health enthusiast, ADVCALC simplifies complex calculations to help you make informed decisions and reach your goals efficiently. Explore our diverse range of tools and experience the convenience of ADVCALC today!</p>
+        
+        <h2>Our Offerings</h2>
+        <p>From our versatile scientific calculator capable of handling advanced mathematical functions to our conversion calculator for effortlessly converting between units, and our health calculators such as BMI, BMR, and pace calculators, we offer a diverse range of tools to meet your needs.</p>
+        
+        <h2>Why Choose Us?</h2>
+        <p>With a commitment to excellence in design and functionality, we ensure that our calculators are easy to use and navigate, whether you're a student studying for an exam or a professional solving complex equations or an individual seeking health calculations.</p>
+        
+        <p class="name">Prabigya Acharya</p>
+    </div>
+    
     <script src="script.js"></script>
+    <script>
+        // Mobile menu toggle functionality
+        const bxMenu = document.querySelector('.bx-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        bxMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
